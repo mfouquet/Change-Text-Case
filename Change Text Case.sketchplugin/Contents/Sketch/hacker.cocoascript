@@ -29,6 +29,10 @@ var changeCaseToHacker = function(context) {
         layer.setStringValue(str)
         layer.setName(str)
         layer.adjustFrameToFit();
+
+        var doc = context.document
+        doc.showMessage("You should be ashamed of yourself.")
+        }
       }
     }
   }
