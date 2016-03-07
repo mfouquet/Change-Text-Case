@@ -1,5 +1,5 @@
 # Change-Text-Case
-Change the case of your text to upper, lower, Chicago title, or hacker case.
+Change the case of your text to UPPER, lower, Chicago Title, or hAcKeR (good heavens why) case.
 
 ##Installation
 1. Download the plugin and double-click to install.
