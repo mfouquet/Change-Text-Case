@@ -1,0 +1,17 @@
+@import 'utility.js'
+
+var changeCaseToLowercase = function(context) {
+  var selection = context.selection
+
+  if (checkLayerCount(selection.count())) {
+    var loop = selection.objectEnumerator()
+    while (layer = loop.nextObject()) {
+      if (layer instanceof MSTextLayer) {
+        var newText = layer.stringValue().toLowerCase()
+        layer.setStringValue(newText)
+        layer.setName(newText)
+        layer.adjustFrameToFit();
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@import 'utility.js'
+
+var changeCaseToHacker = function(context) {
+  var selection = context.selection
+
+  if (checkLayerCount(selection.count())) {
+    var loop = selection.objectEnumerator()
+    while (layer = loop.nextObject()) {
+      if (layer instanceof MSTextLayer) {
+        var text = layer.stringValue()
+        str = text.split('');
+
+        var upperCase = false
+
+        for (var i = 0; i < text.length(); i++) {
+          if (str[i] !== " ") {
+            if (upperCase) {
+              str[i] = str[i].toUpperCase()
+            } else {
+              str[i] = str[i].toLowerCase()
+            }
+
+            upperCase = !upperCase
+          }
+        }
+
+        str = str.join('');
+
+        layer.setStringValue(str)
+        layer.setName(str)
+        layer.adjustFrameToFit();
+      }
+    }
+  }
+}

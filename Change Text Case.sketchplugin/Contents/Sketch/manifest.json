@@ -1,0 +1,49 @@
+{
+  "name": "Change Text Case",
+  "description": "Change the case of your text to upper, lower, Chicago title, or hacker case.",
+  "author": "Michael Fouquet",
+  "authorEmail": "michael.fouquet@me.com",
+  "homepage": "https://github.com/mfouquet/change-text-case",
+  "version" : "1.0",
+  "compatibleVersion": 3,
+  "identifier" : "com.mfouquet.sketch.change-text-case",
+  "commands" : [
+    {
+      "name" : "UPPERCASE",
+      "identifier" : "uppercase",
+      "script" : "uppercase.cocoascript",
+      "handler" : "changeCaseToUppercase",
+      "shortcut" : "",
+    },
+    {
+      "name" : "lowercase",
+      "identifier" : "lowercase",
+      "script" : "lowercase.cocoascript",
+      "handler" : "changeCaseToLowercase",
+      "shortcut" : "",
+    },
+    {
+      "name" : "Chicago Title Case",
+      "identifier" : "titlecase",
+      "script" : "titlecase.cocoascript",
+      "handler" : "changeCaseToChicagoTitleCase",
+      "shortcut" : "",
+    },
+    {
+      "name" : "HaCkEr",
+      "identifier" : "hackercase",
+      "script" : "hacker.cocoascript",
+      "handler" : "changeCaseToHacker",
+      "shortcut" : "",
+    },
+  ],
+  "menu" : {
+    "items" : [
+      "uppercase",
+      "lowercase",
+      "titlecase",
+      "hackercase"
+    ],
+    "title" : "Change Text Case"
+  },
+}
